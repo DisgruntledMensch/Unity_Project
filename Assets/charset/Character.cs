@@ -12,6 +12,12 @@ public class Character : MonoBehaviour
     [SerializeField]
     private float WalkSpeed = 1f;
 
+    public ProjectileMovement projectile;
+    public Transform Shoot;
+
+    public float Cooldown;
+    float lastShot;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -39,6 +45,16 @@ public class Character : MonoBehaviour
             {
                 transform.position += new Vector3(input_x, 0, 0).normalized * Time.deltaTime;
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (Time.time - lastShot < Cooldown)
+            {
+                return;
+            }
+            lastShot = Time.time;
+            Instantiate(projectile, Shoot.position, transform.rotation);
         }
 
     }
