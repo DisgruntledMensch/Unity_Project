@@ -15,12 +15,15 @@ public class Score : MonoBehaviour
     public GameObject LevelComplete5Text;
     public GameObject BossfightText;
 
+    public int nextSceneLoad;
+
     private void Start()
     {
         Scene currentScene = SceneManager.GetActiveScene();
 
         string sceneName = currentScene.name;
 
+        nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -67,6 +70,11 @@ public class Score : MonoBehaviour
             Instantiate(LevelComplete1Text);
             score = 0;
             Time.timeScale = 0;
+
+            if(nextSceneLoad > PlayerPrefs.GetInt("levelAt"))
+            {
+                PlayerPrefs.SetInt("levelAt", nextSceneLoad);
+            }
         }
 
         else if (score == 3 && sceneName == "Level2")
@@ -74,6 +82,11 @@ public class Score : MonoBehaviour
             Instantiate(LevelComplete2Text);
             score = 0;
             Time.timeScale = 0;
+
+            if (nextSceneLoad > PlayerPrefs.GetInt("levelAt"))
+            {
+                PlayerPrefs.SetInt("levelAt", nextSceneLoad);
+            }
         }
 
         else if (score == 3 && sceneName == "Level3")
@@ -81,6 +94,11 @@ public class Score : MonoBehaviour
             Instantiate(LevelComplete3Text);
             score = 0;
             Time.timeScale = 0;
+
+            if (nextSceneLoad > PlayerPrefs.GetInt("levelAt"))
+            {
+                PlayerPrefs.SetInt("levelAt", nextSceneLoad);
+            }
         }
 
         else if (score == 4 && sceneName == "Level4")
@@ -88,13 +106,32 @@ public class Score : MonoBehaviour
             Instantiate(LevelComplete4Text);
             score = 0;
             Time.timeScale = 0;
+
+            if (nextSceneLoad > PlayerPrefs.GetInt("levelAt"))
+            {
+                PlayerPrefs.SetInt("levelAt", nextSceneLoad);
+            }
         }
 
-        else if (score == 3 && sceneName == "Level5")
+        else if (score == 5 && sceneName == "Level5")
         {
             Instantiate(LevelComplete5Text);
             score = 0;
             Time.timeScale = 0;
+
+            if (nextSceneLoad > PlayerPrefs.GetInt("levelAt"))
+            {
+                PlayerPrefs.SetInt("levelAt", nextSceneLoad);
+            }
+        }
+
+        else if (score == 3 && sceneName == "BossFight")
+        {
+            Instantiate(BossfightText);
+            score = 0;
+            Time.timeScale = 0;
+
+
         }
     }
 }
