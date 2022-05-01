@@ -17,20 +17,11 @@ public class Enemy : MonoBehaviour
     public Rigidbody2D rb;
 
     public GameObject LevelCompleteText;
-    // Start is called before the first frame update
+
+     
     void Start()
     {
         rb.AddForce(Force, ForceMode2D.Impulse);
-    }
-
-    void Update()
-    {
-        
-    }
-
-    private void FixedUpdate()
-    {
-        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -38,8 +29,6 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Instantiate(GameOverText);
-            Destroy(player);
-            Time.timeScale = 0;
         }
 
         if(collision.gameObject.tag == "Projectile")

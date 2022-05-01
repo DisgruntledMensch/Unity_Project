@@ -15,18 +15,11 @@ public class SmallEnemy : MonoBehaviour
         rb.AddForce(smallBallForce, ForceMode2D.Impulse);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             Instantiate(text);
-            Destroy(GameObject.FindWithTag("Player"));
             Time.timeScale = 0;
         }
 

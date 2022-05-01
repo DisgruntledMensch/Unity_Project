@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e110f0f6f813bc54dbf91ebd8e614483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 6483243874016784078, guid: c94f4658b42bda2469bbc4a1de6b3646, type: 3}
+  text: {fileID: 3094586123026514007, guid: c94f4658b42bda2469bbc4a1de6b3646, type: 3}
   Enemy: {fileID: 3550943957685073619}
   smallBallForce: {x: -4, y: 0}
   rb: {fileID: 6412324188941879883}
@@ -154,7 +154,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bounce: {fileID: 8300000, guid: 4ab2722915f05bd4ca3afd54d3e6eca8, type: 3}
   hit: {fileID: 8300000, guid: 9289d3aca1e51044db5ad003a12da415, type: 3}
-  split: {fileID: 8300000, guid: 7bec808a4adb2734492685b8bf5a5790, type: 3}
 --- !u!82 &-5276754988680301647
 AudioSource:
   m_ObjectHideFlags: 0

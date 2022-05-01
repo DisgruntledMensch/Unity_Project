@@ -8,10 +8,10 @@ public class Character : MonoBehaviour
     private Animator anim;
 
     [SerializeField]
-    private float RunSpeed = 2f;
+    public float RunSpeed = 2f;
 
     [SerializeField]
-    private float WalkSpeed = 1f;
+    public float WalkSpeed = 1f;
 
     public ProjectileMovement projectile;
     public Transform Shoot;
@@ -26,7 +26,6 @@ public class Character : MonoBehaviour
         GetComponent<AudioSource>().clip = shoot;
     }
 
-    // Update is called once per frame
     void Update()
     {
         float input_x = Input.GetAxisRaw("Horizontal");
@@ -61,5 +60,13 @@ public class Character : MonoBehaviour
             Instantiate(projectile, Shoot.position, transform.rotation);
         }
 
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Time.timeScale = 0;
+        }
     }
 }

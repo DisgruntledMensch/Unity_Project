@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 756663040d5c84d48949fdec6b01a64d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameOverText: {fileID: 6483243874016784078, guid: c94f4658b42bda2469bbc4a1de6b3646, type: 3}
+  GameOverText: {fileID: 3094586123026514007, guid: c94f4658b42bda2469bbc4a1de6b3646, type: 3}
   player: {fileID: 0}
   enemy: {fileID: 3181791364479418489}
   SmallEnemyRight: {fileID: 3550943957685073619, guid: 2cce7cbc181b4254c85ea5f5182a787d, type: 3}

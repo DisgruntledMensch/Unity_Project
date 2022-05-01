@@ -160,7 +160,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f9ec483fb973d4388cf4e3a33feaae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelCompleteText: {fileID: 6152383973415072004, guid: 0d4f40e2b5cd2724db5714a6ca16f385, type: 3}
+  LevelComplete1Text: {fileID: 4779825851808238379, guid: 0d4f40e2b5cd2724db5714a6ca16f385, type: 3}
+  LevelComplete2Text: {fileID: 7161048843481401571, guid: de79d7ccf1172054aaa7ee809e59108c, type: 3}
+  LevelComplete3Text: {fileID: 1526508913454955679, guid: f77126cdb7f6ad141838144c79051502, type: 3}
+  LevelComplete4Text: {fileID: 8769505527203172326, guid: 41f3457f3cac39642894458fa7256274, type: 3}
+  LevelComplete5Text: {fileID: 0}
+  BossfightText: {fileID: 0}
 --- !u!82 &-8653566605468992433
 AudioSource:
   m_ObjectHideFlags: 0

@@ -1066,8 +1066,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13be5642a89ea4a46bc65139e8f23812, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shoot: {fileID: 0}
   RunSpeed: 5
   WalkSpeed: 2
+  projectile: {fileID: 0}
+  Shoot: {fileID: 0}
+  Cooldown: 0
 --- !u!61 &1068310009
 BoxCollider2D:
   m_ObjectHideFlags: 0
