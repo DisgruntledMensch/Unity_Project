@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+    public AudioClip shoot;
     private Animator anim;
 
     [SerializeField]
@@ -21,6 +22,8 @@ public class Character : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        GetComponent<AudioSource>().playOnAwake = false;
+        GetComponent<AudioSource>().clip = shoot;
     }
 
     // Update is called once per frame
@@ -53,6 +56,7 @@ public class Character : MonoBehaviour
             {
                 return;
             }
+            GetComponent<AudioSource>().Play();
             lastShot = Time.time;
             Instantiate(projectile, Shoot.position, transform.rotation);
         }
