@@ -15,7 +15,8 @@ public class Enemy : MonoBehaviour
 
     public Vector2 Force;
     public Rigidbody2D rb;
-
+    public Rigidbody2D explosion;
+    public Transform spawnPoint;
     public GameObject LevelCompleteText;
 
      
@@ -28,15 +29,16 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Instantiate(GameOverText);
+              Instantiate(GameOverText);
         }
 
         if(collision.gameObject.tag == "Projectile")
         {
             Instantiate(SmallEnemyRight, enemyPositionRight.position, enemyPositionRight.rotation);
             Destroy(enemy);
-
+            explosion = Instantiate(explosion, spawnPoint.position, Quaternion.identity) as Rigidbody2D;
             Instantiate(SmallEnemyLeft, enemyPositionLeft.position, enemyPositionLeft.rotation);
+
 
         }
 

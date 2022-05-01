@@ -2205,6 +2205,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!4 &1552757243 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3181791364479418757, guid: 1850cb34842c3bc49901afb28af30723, type: 3}
+  m_PrefabInstance: {fileID: 3181791363551039109}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1672891549
 GameObject:
   m_ObjectHideFlags: 0
@@ -2570,6 +2575,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1068310004}
+    - target: {fileID: 3181791364479418756, guid: 1850cb34842c3bc49901afb28af30723, type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 8973215348912483721, guid: 30c6911cdd3a4a34da9f3ee40d492344, type: 3}
+    - target: {fileID: 3181791364479418756, guid: 1850cb34842c3bc49901afb28af30723, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1552757243}
     - target: {fileID: 3181791364479418757, guid: 1850cb34842c3bc49901afb28af30723, type: 3}
       propertyPath: m_RootOrder
       value: 7

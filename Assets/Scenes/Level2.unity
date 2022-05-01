@@ -552,6 +552,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 872119811}
+    - target: {fileID: 3181791364479418756, guid: 1850cb34842c3bc49901afb28af30723, type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 8973215348912483721, guid: 30c6911cdd3a4a34da9f3ee40d492344, type: 3}
+    - target: {fileID: 3181791364479418756, guid: 1850cb34842c3bc49901afb28af30723, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1843287811}
     - target: {fileID: 3181791364479418757, guid: 1850cb34842c3bc49901afb28af30723, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -3844,6 +3852,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bounce: {fileID: 8300000, guid: 4ab2722915f05bd4ca3afd54d3e6eca8, type: 3}
   hit: {fileID: 8300000, guid: 9289d3aca1e51044db5ad003a12da415, type: 3}
+--- !u!4 &1843287811 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3181791364479418757, guid: 1850cb34842c3bc49901afb28af30723, type: 3}
+  m_PrefabInstance: {fileID: 496502740}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1868087752
 GameObject:
   m_ObjectHideFlags: 0

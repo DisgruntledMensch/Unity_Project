@@ -873,6 +873,14 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3181791364479418756, guid: 1850cb34842c3bc49901afb28af30723, type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 8973215348912483721, guid: 30c6911cdd3a4a34da9f3ee40d492344, type: 3}
+    - target: {fileID: 3181791364479418756, guid: 1850cb34842c3bc49901afb28af30723, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 2137413563}
     - target: {fileID: 3181791364479418757, guid: 1850cb34842c3bc49901afb28af30723, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2717,3 +2725,8 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!4 &2137413563 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3181791364479418757, guid: 1850cb34842c3bc49901afb28af30723, type: 3}
+  m_PrefabInstance: {fileID: 975867499}
+  m_PrefabAsset: {fileID: 0}
