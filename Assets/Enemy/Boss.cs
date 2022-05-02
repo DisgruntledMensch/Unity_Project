@@ -50,7 +50,7 @@ public class Boss : MonoBehaviour
 
         }
 
-        if (Health == 0)
+        if (Health <= 0)
         {
             Instantiate(gameFinished);
             Time.timeScale = 0;
