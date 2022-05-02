@@ -7,6 +7,9 @@ public class SpinObstacle : MonoBehaviour
 
     [SerializeField]
     float speed; 
+
+    [SerializeField]
+    int direction; 
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +19,6 @@ public class SpinObstacle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(speed * Time.deltaTime, 0f, 0f, Space.Self); 
+        transform.Rotate(0f, 0f, direction * speed * Time.deltaTime, Space.Self); 
     }
 }
