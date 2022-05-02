@@ -43,8 +43,8 @@ public class Boss : MonoBehaviour
             if (Health <= 50)
         {
             Instantiate(SmallEnemyRight, enemyPositionRight.position, enemyPositionRight.rotation);
+            explosion = Instantiate(explosion, spawnPoint.position, Quaternion.identity) as Rigidbody2D;
             Destroy(enemy);
-            //explosion = Instantiate(explosion, spawnPoint.position, Quaternion.identity) as Rigidbody2D;
             Instantiate(SmallEnemyLeft, enemyPositionLeft.position, enemyPositionLeft.rotation);
 
 

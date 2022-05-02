@@ -23,8 +23,9 @@ public class ProjectileMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Enemy") { audioSource.PlayOneShot(split); }
-       
+        if (collision.collider.tag == "Enemy" && collision.collider.tag == "Boss") { audioSource.PlayOneShot(split); }
+        if(collision.collider.tag == "Boss") {Destroy(gameObject); }
+
     }
 //this is just a comment, hope u guys see it
 }
