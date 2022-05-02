@@ -56,5 +56,6 @@ public class Boss : MonoBehaviour
             Time.timeScale = 0;
         }
 
+
     }
 }
