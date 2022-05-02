@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Boss : MonoBehaviour
 {
+
+    // public GameObject BossHealth; 
     public GameObject GameOverText;
     public GameObject player;
     public GameObject enemy;
@@ -24,6 +26,8 @@ public class Boss : MonoBehaviour
     public int Health = 100;
     void Start()
     {
+        // text = GetComponent<Text>();
+
         rb.AddForce(Force, ForceMode2D.Impulse);
 
         //Physics2D.IgnoreCollision(enemy.GetComponent<CircleCollider2D>(),projectile.GetComponent<BoxCollider2D>());
@@ -46,8 +50,6 @@ public class Boss : MonoBehaviour
             explosion = Instantiate(explosion, spawnPoint.position, Quaternion.identity) as Rigidbody2D;
             Destroy(enemy);
             Instantiate(SmallEnemyLeft, enemyPositionLeft.position, enemyPositionLeft.rotation);
-
-
         }
 
         if (Health <= 0)
@@ -56,6 +58,13 @@ public class Boss : MonoBehaviour
             Time.timeScale = 0;
         }
 
+        // Debug.Log(Health); 
+
+        // Text hp = BossHealth.GetComponent<Text>();
+
+        // Health = int.Parse(hp.text); 
+
+        // hp.text = Health.Tostring();
 
     }
 }
