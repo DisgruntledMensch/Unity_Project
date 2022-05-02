@@ -9,6 +9,7 @@ public class SmallEnemy : MonoBehaviour
 
     public Vector2 smallBallForce;
     public Rigidbody2D rb;
+    public Rigidbody2D explosion;
 
     void Start()
     {
@@ -25,6 +26,7 @@ public class SmallEnemy : MonoBehaviour
 
         if (collision.gameObject.tag == "Projectile")
         {
+            explosion = Instantiate(explosion, gameObject.transform.position, Quaternion.identity) as Rigidbody2D;
             Destroy(Enemy);
 
         }

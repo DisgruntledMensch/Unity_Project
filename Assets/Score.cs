@@ -15,6 +15,7 @@ public class Score : MonoBehaviour
     public GameObject LevelComplete5Text;
     public GameObject BossfightText;
 
+
     private void Start()
     {
         Scene currentScene = SceneManager.GetActiveScene();
@@ -67,6 +68,7 @@ public class Score : MonoBehaviour
             Instantiate(LevelComplete1Text);
             score = 0;
             Time.timeScale = 0;
+
         }
 
         else if (score == 3 && sceneName == "Level2")
@@ -74,6 +76,7 @@ public class Score : MonoBehaviour
             Instantiate(LevelComplete2Text);
             score = 0;
             Time.timeScale = 0;
+
         }
 
         else if (score == 3 && sceneName == "Level3")
@@ -81,6 +84,7 @@ public class Score : MonoBehaviour
             Instantiate(LevelComplete3Text);
             score = 0;
             Time.timeScale = 0;
+
         }
 
         else if (score == 4 && sceneName == "Level4")
@@ -88,13 +92,24 @@ public class Score : MonoBehaviour
             Instantiate(LevelComplete4Text);
             score = 0;
             Time.timeScale = 0;
+
         }
 
-        else if (score == 3 && sceneName == "Level5")
+        else if (score == 5 && sceneName == "Level5")
         {
             Instantiate(LevelComplete5Text);
             score = 0;
             Time.timeScale = 0;
+
+        }
+
+        else if (score == 10 && sceneName == "BossFight")
+        {
+            Instantiate(BossfightText);
+            score = 0;
+            Time.timeScale = 0;
+
+
         }
     }
 }

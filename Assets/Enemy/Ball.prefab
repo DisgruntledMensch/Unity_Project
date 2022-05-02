@@ -175,6 +175,8 @@ MonoBehaviour:
   enemyPositionLeft: {fileID: 3181791364679566106}
   Force: {x: 2, y: 0}
   rb: {fileID: 3181791364479418491}
+  explosion: {fileID: 0}
+  spawnPoint: {fileID: 0}
   LevelCompleteText: {fileID: 6152383973415072004, guid: 0d4f40e2b5cd2724db5714a6ca16f385, type: 3}
 --- !u!1 &3181791364679566107
 GameObject:
