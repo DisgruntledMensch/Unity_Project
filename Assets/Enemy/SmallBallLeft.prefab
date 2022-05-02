@@ -103,6 +103,7 @@ MonoBehaviour:
   Enemy: {fileID: 3550943957685073619}
   smallBallForce: {x: -4, y: 0}
   rb: {fileID: 6412324188941879883}
+  explosion: {fileID: 8973215348912483721, guid: 2428501f9901ad244af4a88c2d9faf2f, type: 3}
 --- !u!50 &6412324188941879883
 Rigidbody2D:
   serializedVersion: 4
