@@ -15,7 +15,6 @@ public class Score : MonoBehaviour
     public GameObject LevelComplete5Text;
     public GameObject BossfightText;
 
-    public int nextSceneLoad;
 
     private void Start()
     {
@@ -23,7 +22,6 @@ public class Score : MonoBehaviour
 
         string sceneName = currentScene.name;
 
-        nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -71,10 +69,6 @@ public class Score : MonoBehaviour
             score = 0;
             Time.timeScale = 0;
 
-            if(nextSceneLoad > PlayerPrefs.GetInt("levelAt"))
-            {
-                PlayerPrefs.SetInt("levelAt", nextSceneLoad);
-            }
         }
 
         else if (score == 3 && sceneName == "Level2")
@@ -83,10 +77,6 @@ public class Score : MonoBehaviour
             score = 0;
             Time.timeScale = 0;
 
-            if (nextSceneLoad > PlayerPrefs.GetInt("levelAt"))
-            {
-                PlayerPrefs.SetInt("levelAt", nextSceneLoad);
-            }
         }
 
         else if (score == 3 && sceneName == "Level3")
@@ -95,10 +85,6 @@ public class Score : MonoBehaviour
             score = 0;
             Time.timeScale = 0;
 
-            if (nextSceneLoad > PlayerPrefs.GetInt("levelAt"))
-            {
-                PlayerPrefs.SetInt("levelAt", nextSceneLoad);
-            }
         }
 
         else if (score == 4 && sceneName == "Level4")
@@ -107,10 +93,6 @@ public class Score : MonoBehaviour
             score = 0;
             Time.timeScale = 0;
 
-            if (nextSceneLoad > PlayerPrefs.GetInt("levelAt"))
-            {
-                PlayerPrefs.SetInt("levelAt", nextSceneLoad);
-            }
         }
 
         else if (score == 5 && sceneName == "Level5")
@@ -119,13 +101,9 @@ public class Score : MonoBehaviour
             score = 0;
             Time.timeScale = 0;
 
-            if (nextSceneLoad > PlayerPrefs.GetInt("levelAt"))
-            {
-                PlayerPrefs.SetInt("levelAt", nextSceneLoad);
-            }
         }
 
-        else if (score == 3 && sceneName == "BossFight")
+        else if (score == 10 && sceneName == "BossFight")
         {
             Instantiate(BossfightText);
             score = 0;

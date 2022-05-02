@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1509642743430785609}
   - component: {fileID: -4794669713106743124}
   - component: {fileID: -8653566605468992433}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bullet
   m_TagString: Projectile
   m_Icon: {fileID: 0}
@@ -166,7 +166,6 @@ MonoBehaviour:
   LevelComplete4Text: {fileID: 8769505527203172326, guid: 41f3457f3cac39642894458fa7256274, type: 3}
   LevelComplete5Text: {fileID: 2766290140290096280, guid: adf1d8bd78cd1534a8bb02eb98aab117, type: 3}
   BossfightText: {fileID: 1968909563797152407, guid: ce8844358e002684084bd3bba4590db1, type: 3}
-  unlocklevels: {fileID: 8122852040786607756, guid: 9976633261abe1f4095ee7e0b00479d8, type: 3}
 --- !u!82 &-8653566605468992433
 AudioSource:
   m_ObjectHideFlags: 0

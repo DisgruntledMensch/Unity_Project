@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6803955211915488831}
   - component: {fileID: 3392732509510936553}
   - component: {fileID: 6165117884153620629}
-  - component: {fileID: 3437013170797817268}
+  - component: {fileID: 5766517960629882733}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3437013170797817268}
+      - m_Target: {fileID: 5766517960629882733}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 1
@@ -134,7 +134,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3437013170797817268
+--- !u!114 &5766517960629882733
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1294355980747033729}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f274b6dee9904a3408d64ab99a97718a, type: 3}
+  m_Script: {fileID: 11500000, guid: 22dd04a424a18184dae91843b31ae0a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Level: MainMenu
@@ -552,8 +552,8 @@ GameObject:
   - component: {fileID: 5190240891090926162}
   - component: {fileID: 4021751859313716879}
   - component: {fileID: 8563987721237986582}
-  - component: {fileID: 6288295018345370161}
   - component: {fileID: 2745716808562683387}
+  - component: {fileID: 2828069310508477270}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -619,19 +619,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6288295018345370161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8603169602463494582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f274b6dee9904a3408d64ab99a97718a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Level: Level2
 --- !u!114 &2745716808562683387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -676,7 +663,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6288295018345370161}
+      - m_Target: {fileID: 2828069310508477270}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 1
@@ -688,3 +675,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2828069310508477270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8603169602463494582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22dd04a424a18184dae91843b31ae0a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Level: Level2
