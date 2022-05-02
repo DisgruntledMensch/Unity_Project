@@ -26,11 +26,11 @@ public class Boss : MonoBehaviour
     public int Health = 100;
     void Start()
     {
-        // text = GetComponent<Text>();
+        //  text = GetComponent<Text>();
 
         rb.AddForce(Force, ForceMode2D.Impulse);
 
-        //Physics2D.IgnoreCollision(enemy.GetComponent<CircleCollider2D>(),projectile.GetComponent<BoxCollider2D>());
+        Physics2D.IgnoreCollision(enemy.GetComponent<CircleCollider2D>(),projectile.GetComponent<BoxCollider2D>());
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -58,13 +58,13 @@ public class Boss : MonoBehaviour
             Time.timeScale = 0;
         }
 
-        // Debug.Log(Health); 
+        //  Debug.Log(Health); 
 
-        // Text hp = BossHealth.GetComponent<Text>();
+        //  Text hp = BossHealth.GetComponent<Text>();
 
-        // Health = int.Parse(hp.text); 
+        //  Health = int.Parse(hp.text); 
 
-        // hp.text = Health.Tostring();
+        //  hp.text = Health.Tostring();
 
     }
 }
