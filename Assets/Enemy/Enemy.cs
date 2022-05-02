@@ -36,7 +36,7 @@ public class Enemy : MonoBehaviour
         {
             Instantiate(SmallEnemyRight, enemyPositionRight.position, enemyPositionRight.rotation);
             Destroy(enemy);
-            explosion = Instantiate(explosion, spawnPoint.position, Quaternion.identity) as Rigidbody2D;
+            explosion = Instantiate(explosion, gameObject.transform.position, Quaternion.identity) as Rigidbody2D;
             Instantiate(SmallEnemyLeft, enemyPositionLeft.position, enemyPositionLeft.rotation);
 
 
