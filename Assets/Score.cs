@@ -104,10 +104,10 @@ public class Score : MonoBehaviour
         }
 
         else if (score == 10 && sceneName == "BossFight")
-        {
-            Instantiate(BossfightText);
-            score = 0;
-            Time.timeScale = 0;
+       {
+           Instantiate(BossfightText);
+           score = 0;
+          Time.timeScale = 0;
 
 
         }

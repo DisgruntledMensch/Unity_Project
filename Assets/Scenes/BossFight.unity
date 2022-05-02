@@ -3175,7 +3175,7 @@ PrefabInstance:
     - target: {fileID: 7199055095529489157, guid: 3d4f1eb1db680ef42962477d32edc477, type: 3}
       propertyPath: explosion
       value: 
-      objectReference: {fileID: 8973215348912483721, guid: 30c6911cdd3a4a34da9f3ee40d492344, type: 3}
+      objectReference: {fileID: 8973215348912483721, guid: 0ef0afda2656462478159d3e53370449, type: 3}
     - target: {fileID: 7199055095529489157, guid: 3d4f1eb1db680ef42962477d32edc477, type: 3}
       propertyPath: spawnPoint
       value: 
