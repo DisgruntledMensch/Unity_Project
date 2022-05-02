@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class SpinObstacle : MonoBehaviour
 {
+
+    [SerializeField]
+    float speed; 
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +16,6 @@ public class SpinObstacle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Translate(speed * Time.deltaTime, 0f, 0f, Space.Self); 
     }
 }
