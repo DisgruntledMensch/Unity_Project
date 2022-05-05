@@ -24,13 +24,27 @@ public class Boss : MonoBehaviour
     public GameObject LevelCompleteText;
 
     public int Health = 100;
+    public int currentHealth; 
     void Start()
     {
-        //  text = GetComponent<Text>();
+        currentHealth = maxHealth; 
 
         rb.AddForce(Force, ForceMode2D.Impulse);
 
         Physics2D.IgnoreCollision(enemy.GetComponent<CircleCollider2D>(),projectile.GetComponent<BoxCollider2D>());
+    }
+
+    void Update() 
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            TakeDamage(20);   
+        }   
+    }
+
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage; 
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -57,14 +71,6 @@ public class Boss : MonoBehaviour
             Instantiate(gameFinished);
             Time.timeScale = 0;
         }
-
-        //  Debug.Log(Health); 
-
-        //  Text hp = BossHealth.GetComponent<Text>();
-
-        //  Health = int.Parse(hp.text); 
-
-        //  hp.text = Health.Tostring();
 
     }
 }
