@@ -5,7 +5,6 @@ using UnityEngine;
 public class Boss : MonoBehaviour
 {
 
-    // public GameObject BossHealth; 
     public GameObject GameOverText;
     public GameObject player;
     public GameObject enemy;
@@ -23,28 +22,31 @@ public class Boss : MonoBehaviour
     public Transform spawnPoint;
     public GameObject LevelCompleteText;
 
-    public int Health = 100;
-    public int currentHealth; 
+    public HealthBarBehaviour Healthbar; 
+    public float Hitpoints;
+
+    [SerializeField]
+    public float MaxHitPoints = 10;
+
     void Start()
     {
-        currentHealth = maxHealth; 
+        Hitpoints = MaxHitPoints; 
+        Healthbar.SetHealth(Hitpoints, MaxHitPoints);
 
         rb.AddForce(Force, ForceMode2D.Impulse);
 
         Physics2D.IgnoreCollision(enemy.GetComponent<CircleCollider2D>(),projectile.GetComponent<BoxCollider2D>());
     }
 
-    void Update() 
-    {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(20);   
-        }   
-    }
+    public void TakeHit(float damage) 
+    { 
+        Hitpoints -= damage;
+        Healthbar.SetHealth(Hitpoints, MaxHitPoints);
 
-    void TakeDamage(int damage)
-    {
-        currentHealth -= damage; 
+        if(Hitpoints <= 5)
+        {
+            Destroy(enemy);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -56,9 +58,9 @@ public class Boss : MonoBehaviour
         }
         if (collision.gameObject.tag == "Projectile")
         {
-            Health -= 10;
+            MaxHitPoints -= 1;
         }
-            if (Health <= 50)
+            if (MaxHitPoints <= 5)
         {
             Instantiate(SmallEnemyRight, enemyPositionRight.position, enemyPositionRight.rotation);
             explosion = Instantiate(explosion, spawnPoint.position, Quaternion.identity) as Rigidbody2D;
@@ -66,7 +68,7 @@ public class Boss : MonoBehaviour
             Instantiate(SmallEnemyLeft, enemyPositionLeft.position, enemyPositionLeft.rotation);
         }
 
-        if (Health <= 0)
+        if (MaxHitPoints <= 0)
         {
             Instantiate(gameFinished);
             Time.timeScale = 0;

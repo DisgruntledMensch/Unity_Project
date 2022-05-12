@@ -28,11 +28,11 @@ public class SmallBoss : MonoBehaviour
         if (collision.gameObject.tag == "Projectile")
         {
 
-            boss.Health -= 10;
+            boss.MaxHitPoints -= 1;
 
         }
 
-        if(boss.Health == 0)
+        if(boss.MaxHitPoints == 0)
         {
             Instantiate(gameFinished);
             Time.timeScale = 0;
